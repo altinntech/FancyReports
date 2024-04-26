@@ -21,12 +21,6 @@
   </developers>
 
   <distributionManagement>
-    <!--<repository>
-      <snapshots />
-      <id>snapshots</id>
-      <name>libs-snapshot</name>
-      <url>http://217.25.90.14:8081/artifactory/libs-snapshot</url>
-    </repository>-->
     <repository>
       <snapshots />
       <id>nexus-server</id>
