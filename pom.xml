@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.altinntech</groupId>
+  <artifactId>fancy_reports</artifactId>
+  <packaging>jar</packaging>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+  <version>1.0</version>
+  <name>FancyReports</name>
+  <url>http://maven.apache.org</url>
+  <developers>
+    <developer>
+      <name>Fyodor Plotnikov</name>
+      <email>plotnikov.feodor@yandex.ru</email>
+      <organization>AltInnTech</organization>
+      <organizationUrl>https://altinntech.com/en/</organizationUrl>
+    </developer>
+  </developers>
+
+  <distributionManagement>
+    <!--<repository>
+      <snapshots />
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>http://217.25.90.14:8081/artifactory/libs-snapshot</url>
+    </repository>-->
+    <repository>
+      <snapshots />
+      <id>nexus-server</id>
+      <name>maven-snapshots</name>
+      <url>https://maven.altinntech.com/repository/maven-snapshots/</url>
+    </repository>
+  </distributionManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.30</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version> <!-- Обновленная версия плагина -->
+        <configuration>
+          <source>11</source> <!-- Версия исходного кода -->
+          <target>11</target> <!-- Версия байт-кода -->
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
